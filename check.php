@@ -12,12 +12,14 @@ $logins_parsed = json_decode($logins, true);
 foreach($logins_parsed as $data){
     if ($data['name'] === $name && $data['key'] === $key){
         $erro = false;
-        echo "Найдено совпадение!";
     }
 }
 
 if ($erro){
     header("Location:./login.php");
 } else{
-    header("Location:./admin.php");
+    session_start();
+    $_SESSION['project_name'] = $name;
+    $_SESSION['hash'] = hash('sha512', $name . "^&^" . $key);
+    header("Location:./admin/users.php");
 }

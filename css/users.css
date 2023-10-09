@@ -1,0 +1,59 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для больших экранов (ПК) */
+@media screen and (min-width: 768px) {
+    /* Стили для сайдбара */
+    .sidebar {
+        width: 200px;
+        background-color: rgb(28, 27, 34);
+        color: white;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transition: left 0.3s ease-in-out;
+    }
+
+    /* Стили для кнопок меню */
+    .menu-button {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        padding: 10px 0;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    /* Стили для контента */
+    .content {
+        margin-left: 200px;
+        padding: 20px;
+    }
+}
+
+/* Стили для маленьких экранов (телефон) */
+@media screen and (max-width: 767px) {
+    /* Скрываем сайдбар на маленьких экранах */
+    .sidebar {
+        display: none;
+    }
+
+    /* Стили для кнопки открытия сайдбара */
+    #open-button {
+        background-color: rgb(28, 27, 34);
+        color: white;
+        border: none;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
