@@ -8,7 +8,7 @@ trait config{
 
     public $DB_HOST = "localhost";
     public $DB_USER = "root";
-    public $DB_PASW = "277353HeNTaI";
+    public $DB_PASW = "0";
     public $DB_NAME = "sg";
 
     
